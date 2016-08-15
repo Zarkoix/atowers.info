@@ -1,0 +1,55 @@
+.eduIco {
+  max-height: 50%;
+}
+
+.progIco {
+  min-height: 50%;
+}
+
+#towersInfo {
+  width: 50%;
+  height: auto;
+}
+
+a {
+  line-height: 2em;
+  margin-bottom: 0.25em
+}
+
+.navIco {
+  display: inline;
+  max-height: 1.5em;
+  margin-top: 0.25em;
+  margin-right: 0.25em;
+}
+
+.card {
+  min-width: 100%;
+}
+
+// Class for when element is above threshold
+.pin-top {
+  position: relative;
+}
+
+// Class for when element is below threshold
+.pin-bottom {
+  position: relative;
+}
+
+// Class for when element is pinned
+.pinned {
+  position: fixed !important;
+}
+
+.toc-wrapper {
+  max-height: 100%;
+}
+
+.table-of-contents a.active {
+    border-left: 2px solid #009688;
+}
+
+.table-of-contents a.hover {
+    border-left: 1px solid #009688;
+}

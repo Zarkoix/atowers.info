@@ -1,0 +1,20 @@
+#towersInfo {
+  width: 50%;
+  height: auto;
+}
+
+a {
+  line-height: 2em;
+  margin-bottom: 0.25em
+}
+
+.navIco {
+  display: inline;
+  max-height: 1.5em;
+  margin-top: 0.25em;
+  margin-right: 0.25em;
+}
+
+.error {
+  margin-top: 8em;
+}

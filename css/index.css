@@ -1,0 +1,15 @@
+#centerPic {
+  max-width: 25%;
+  max-height: 25%;
+}
+
+html {
+  min-height: 100%;
+}
+
+.navIco {
+  display: inline;
+  max-height: 1.5em;
+  margin-top: 0.25em;
+  margin-right: 0.25em;
+}
