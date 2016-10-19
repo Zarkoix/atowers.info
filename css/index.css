@@ -19,5 +19,10 @@ h1 {
 }
 
 .parallax {
-  max-height: 20vh;
+  background-color: blue;
+
+}
+
+.parallax-container {
+  height: 15em;
 }
