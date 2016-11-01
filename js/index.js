@@ -30,5 +30,10 @@ atowers.controller('projects', function($scope) {
 })
 
 atowers.controller('resume', function($scope) {
-
+	$(document).ready(function(){
+			//$('.scrollspy').scrollSpy()
+			$('#modal1').modal()
+		})
+	$scope.openModal = function() {
+	}
 })
