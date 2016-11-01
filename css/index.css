@@ -1,6 +1,11 @@
+#centerHeader {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #centerPic {
-  max-width: 15vh;
-  max-height: 15vh;
+  max-width: 20vh;
+  max-height: 20vh;
 }
 
 html {
@@ -19,10 +24,9 @@ h1 {
 }
 
 .parallax {
-  background-color: blue;
 
 }
 
 .parallax-container {
-  height: 15em;
+  height: 10em;
 }
