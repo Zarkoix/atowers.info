@@ -1,0 +1,7 @@
+select > option {
+  color: white;
+}
+
+#explanation {
+  padding-top: 2em;
+}

@@ -1,0 +1,38 @@
+<link href="css/breaks.css" type="text/css" rel="stylesheet" media="screen,projection" />
+<div class="container">
+  <div class="row" id="grid">
+    <div class="card blue-grey hoverable darken-1 col s12 m8 offset-m2">
+      <div class="card-content row">
+        <span class="card-title flow-text white-text">Breaks Calculator</span>
+        <div class="input-field col s12">
+          <input id="teams" type="number" class="validate">
+          <label>Number of Teams</label>
+        </div>
+
+        <div class="input-field col s12">
+          <select id="rounds">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="4">4 Rounds</option>
+            <option value="5">5 Rounds</option>
+            <option value="6">6 Rounds</option>
+            <option value="6">7 Rounds</option>
+          </select>
+          <label>Number of Prelims:</label>
+        </div>
+        <div class="input-field col s12">
+          <select id="clearTo">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="64">Tripleoctofinals</option>
+            <option value="32">Doubleoctofinals</option>
+            <option value="16">Octofinals</option>
+            <option value="8">Quarterfinals</option>
+            <option value="4">Semifinals</option>
+          </select>
+          <label>Breaks to:</label>
+        </div>
+        <btn ng-click="calculate()" class="waves-effect waves-light btn col s12">Calculate</btn>
+        <div ng-bind="explanation" id="explanation" class="white-text"></div>
+      </div>
+    </div>
+  </div>
+</div>
