@@ -5,3 +5,11 @@ select > option {
 #explanation {
   padding-top: 2em;
 }
+
+#ico {
+  width: 5em;
+  height: 5em;
+  top: 1em;
+  right: 1em;
+  position: absolute;
+}

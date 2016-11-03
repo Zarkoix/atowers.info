@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>breaks</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="120" height="120"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <polygon id="path-4" points="10.5794393 23.0373832 25.1588785 23.0373832 25.1588785 8.45794393 28.5233645 8.45794393 28.5233645 23.0373832 43.1028037 23.0373832 43.1028037 26.4018692 28.5233645 26.4018692 28.5233645 40.9813084 25.1588785 40.9813084 25.1588785 26.4018692 10.5794393 26.4018692"></polygon>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <circle id="Oval" fill="#009688" cx="100" cy="100" r="100"></circle>
+            <g id="Group-2" transform="translate(40.000000, 40.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group-3" transform="translate(6.000000, 7.000000)">
+                    <rect id="Rectangle-3" fill="#D8D8D8" x="0.485981308" y="0.607476636" width="50.8763178" height="50.2870494"></rect>
+                    <rect id="Rectangle-3" fill="#D8D8D8" x="0.485981308" y="54.4392523" width="50.8763178" height="50.2870494"></rect>
+                    <rect id="Rectangle-3" fill="#D8D8D8" x="55.4392523" y="54.4392523" width="50.8763178" height="50.2870494"></rect>
+                    <rect id="Rectangle-3" fill="#D8D8D8" x="55.4392523" y="0.607476636" width="50.8763178" height="50.2870494"></rect>
+                    <g id="Group-2-Copy" filter="url(#filter-3)" transform="translate(59.925234, 61.168224)">
+                        <g id="Group">
+                            <path d="M8.42292795,1.71628649 C8.42292795,1.71628649 1.84941079,-0.662642987 0.206031497,4.68994835 C-1.43734779,10.0425397 7.19039348,24.3161166 10.4771521,26.6950461 C13.7639106,29.0739755 18.6940485,27.8845108 18.6940485,27.8845108 L18.2832037,24.3161166 C18.2832037,24.3161166 14.5856003,24.9108489 12.1205314,23.7213842 C9.65546242,22.5319195 3.07444393,9.39351329 2.67110043,6.47414546 C2.26775694,3.55477762 8.42292795,4.68994835 8.42292795,4.68994835 L8.42292795,1.71628649 Z" id="Path-3" fill="#FFC400"></path>
+                            <path d="M6.57351716,0 C6.57351716,0 5.3409827,8.32625319 10.6819654,17.8419711 C16.0229481,27.357689 19.3097067,28.5471538 19.3097067,28.5471538 L19.3097067,39.2523364 L21.3639308,39.2523364 L21.3639308,0 L6.57351716,0 Z" id="Path-2" fill="#FFD600"></path>
+                            <polygon id="Path-4" fill="#757575" points="16.4337929 35.6839422 14.3795688 39.2523364 21.3639308 39.2523364 21.3639308 35.6839422"></polygon>
+                        </g>
+                        <g id="Group-Copy" transform="translate(30.495327, 20.000000) scale(-1, 1) translate(-30.495327, -20.000000) translate(19.495327, 0.000000)">
+                            <path d="M8.42292795,1.71628649 C8.42292795,1.71628649 1.84941079,-0.662642987 0.206031497,4.68994835 C-1.43734779,10.0425397 7.19039348,24.3161166 10.4771521,26.6950461 C13.7639106,29.0739755 18.6940485,27.8845108 18.6940485,27.8845108 L18.2832037,24.3161166 C18.2832037,24.3161166 14.5856003,24.9108489 12.1205314,23.7213842 C9.65546242,22.5319195 3.07444393,9.39351329 2.67110043,6.47414546 C2.26775694,3.55477762 8.42292795,4.68994835 8.42292795,4.68994835 L8.42292795,1.71628649 Z" id="Path-3" fill="#FFC400"></path>
+                            <path d="M6.57351716,0 C6.57351716,0 5.3409827,8.32625319 10.6819654,17.8419711 C16.0229481,27.357689 19.3097067,28.5471538 19.3097067,28.5471538 L19.3097067,39.2523364 L21.3639308,39.2523364 L21.3639308,0 L6.57351716,0 Z" id="Path-2" fill="#FFD600"></path>
+                            <polygon id="Path-4" fill="#757575" points="16.4337929 35.6839422 14.3795688 39.2523364 21.3639308 39.2523364 21.3639308 35.6839422"></polygon>
+                        </g>
+                    </g>
+                    <g id="Addition">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <use fill="#616161" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    </g>
+                    <g id="Multiplication" filter="url(#filter-6)" transform="translate(3.728972, 57.682243)" fill="#616161">
+                        <polygon id="Path-5" transform="translate(23.112150, 23.112150) rotate(45.000000) translate(-23.112150, -23.112150) " points="6.85046729 21.4299065 21.4299065 21.4299065 21.4299065 6.85046729 24.7943925 6.85046729 24.7943925 21.4299065 39.3738318 21.4299065 39.3738318 24.7943925 24.7943925 24.7943925 24.7943925 39.3738318 21.4299065 39.3738318 21.4299065 24.7943925 6.85046729 24.7943925"></polygon>
+                    </g>
+                    <g id="Divide" filter="url(#filter-7)" transform="translate(64.411215, 11.822430)" fill="#616161">
+                        <rect id="Rectangle-4" x="0" y="11.2149533" width="32.5233645" height="3.36448598"></rect>
+                        <circle id="Oval-2" cx="16.8224299" cy="3.36448598" r="3.36448598"></circle>
+                        <circle id="Oval-2" cx="16.8224299" cy="22.4299065" r="3.36448598"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
