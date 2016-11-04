@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="flow3App">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Flow3</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+	<link rel="stylesheet" href="style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body ng-controller="ngFlow3">
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo">Flow3</a>
+		</div>
+	</nav>
+	<main class="" ng-cloak>
+    <div class="flow">
+      <div ng-repeat="arg in flow track by $index" class="row fRow">
+        <box ng-repeat="p in arg track by $index" class="box col"></box>
+        <span id="boxAction" class="">
+          <div class="btn-floating btn waves-effect waves-light blue boxBtn" ng-click="extend($index)"><i class="material-icons">send</i></div>
+          <div class="btn-floating btn waves-effect waves-light red boxBtn" ng-click="respond($index)"><i class="material-icons">block</i></div>
+          <div class="btn-floating btn waves-effect waves-light green boxBtn" ng-click="arrow($index)"><i class="material-icons">keyboard_arrow_right</i></div>
+        </span>
+      </div>
+    </div>
+    <div ng-click="addArg()" id="addArg" class="waves-effect waves-teal btn-flat">New Arg</div>
+
+
+	</main>
+	<footer class="page-footer">
+    {{flow}}
+		<div class="footer-copyright">
+			<div class="container">
+				© 2016 Adam Towers
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js" type="text/javascript"></script>
+	<script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>

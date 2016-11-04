@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.box {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 0.75rem;
+  min-height: 3rem;
+}
+
+#addArg {
+  margin-bottom: 2em;
+}
+
+.fRow {
+  overflow-x: scroll;
+}
+
+#boxAction {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow {
+  height: 7rem;
+}
+
+.boxBtn {
+  opacity: 0.5;
+}
+
+.boxBtn:hover {
+  opacity: 1;
+}
+
+.boxClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #D8D8D8;
+  opacity: 0.3;
+
+}
+
+.boxClose:hover {
+  color: #424242;
+  opacity: 1;
+
+}
