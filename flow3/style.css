@@ -4,23 +4,60 @@ body {
   flex-direction: column;
 }
 
-main {
-  flex: 1 0 auto;
+#navImg {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  display: inline;
+  height: 1.7em;
 }
 
-.box {
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.flowL {
+  min-width: 47%;
+  max-width: 47%;
+
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+
+}
+
+.flowR {
+  min-width: 47%;
+  max-width: 47%;
+  margin: 1%;
+
+}
+
+box {
+  display: block;
   float: left;
   box-sizing: border-box;
   padding: 0 0.75rem;
   min-height: 3rem;
 }
 
-#addArg {
-  margin-bottom: 2em;
+arguement {
+  display: block;
+  padding-top: 0.5em;
+  white-space: nowrap;
+  overflow-x: scroll;
+
 }
 
-.fRow {
-  overflow-x: scroll;
+#addArg {
+  display: block;
+  margin-bottom: 2em;
 }
 
 #boxAction {
@@ -32,12 +69,31 @@ main {
   height: 7rem;
 }
 
+.input-field, input, .constructiveTitle {
+  margin: 0 0 0 0!important;
+  padding-bottom: 0;
+}
+
+textarea {
+  margin-bottom: 0 !important;
+}
+
 .boxBtn {
   opacity: 0.5;
+  margin-top: 0.5em;
+  width: 2rem;
+  height: 2rem;
 }
 
 .boxBtn:hover {
   opacity: 1;
+}
+
+.boxBtn > i {
+  margin-top: -6px;
+  display: inline;
+  line-height: 2.2rem;
+  font-size: 1.5rem;
 }
 
 .boxClose {
@@ -46,11 +102,9 @@ main {
   top: 0;
   color: #D8D8D8;
   opacity: 0.3;
-
 }
 
 .boxClose:hover {
   color: #424242;
   opacity: 1;
-
 }

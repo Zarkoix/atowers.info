@@ -3,10 +3,16 @@
   margin-right: auto;
 }
 
-#newBadge {
+#newBadgeContainer {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   left: 0.3em;
   bottom: 0.3em;
+}
+
+.newBadge {
+  margin-top: 0.1em;
 }
 
 #centerPic {
