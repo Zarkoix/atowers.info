@@ -6,7 +6,7 @@ flow3App.controller('ngFlow3', function ngFlow3($scope) {
   $scope.dataL = []
   $scope.dataR = []
   $scope.title
-  $scope.version = '0.1.0'
+  $scope.version = '0.1.1'
   $scope.isSaved = false
 
   if(localStorage){
