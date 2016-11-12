@@ -6,7 +6,7 @@ flow3App.controller('ngFlow3', function ngFlow3($scope) {
   $scope.dataL = []
   $scope.dataR = []
   $scope.title
-  $scope.version = '0.1.1'
+  $scope.version = '0.1.2'
   $scope.isSaved = false
 
   if(localStorage){
@@ -166,7 +166,7 @@ flow3App.directive('box', function() {
   return {
     restrict: 'AE',
     scope: {
-      title: '=',
+      tag: '=',
       text: '=',
       type: '=',
       index: '=',
@@ -198,6 +198,7 @@ flow3App.directive('arguement', function() {
       boxes: '='
     },
     controller: function () {
+      $('.tooltipped').tooltip({delay: 50})
       this.extend = function() {
         this.boxes.push({"type": "extension", "text": ""})
       }
