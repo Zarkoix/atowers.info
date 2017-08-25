@@ -94,12 +94,14 @@ var fetchOptions = {
 function fetchImage(image, object) {
   if (fetch) {
     fetch(image, fetchOptions).then(function(response) {
+      console.log('using fetch')
       return response.blob()
     }).then(function(myBlob) {
       var objectURL = URL.createObjectURL(myBlob)
       object.src = objectURL
     })
   } else {
+    console.log('not using fetch')
     object.setAttribute('src', image)
   }
 }
