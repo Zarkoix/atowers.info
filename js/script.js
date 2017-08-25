@@ -10,8 +10,8 @@ window.onhashchange = function() {
 }
 
 window.onload = function () {
-    console.log('load')
-    openPage()
+  if (!fetch) console.log('Browser does not support fetch, using fallback')
+  openPage()
 }
 
 function openPage () {
@@ -46,6 +46,8 @@ function openPage () {
             console.log('exeucted')
         }
 
+    } else {
+      window.location = ''
     }
 }
 
@@ -54,11 +56,12 @@ var routes
 routes = {
     root: {
         script: function () {
-            fetchImage("graphic.png", document.getElementById("graphic"))
+            fetchImage("/routes/root/graphics/graphic.png", document.getElementById("graphic"))
         }
     },
     resume: {
         script: function () {
+          scanThenFetchImages('.item > img')
           document.getElementById("educationLink").addEventListener("click", function () {
             document.getElementById("educationLinkTarget").scrollIntoView(true)
           })
@@ -71,27 +74,38 @@ routes = {
           document.getElementById("serviceLink").addEventListener("click", function () {
             document.getElementById("serviceLinkTarget").scrollIntoView(true)
           })
-
         }
     },
   projects: {
       script: function () {
-
+        scanThenFetchImages('.imgContainer > img')
       }
   }
 }
 
 
-var fetchOptions = { method: 'GET',
+var fetchOptions = {
+  method: 'GET',
   headers: {},
   mode: 'cors',
-  cache: 'default' }
+  cache: 'default'
+}
 
 function fetchImage(image, object) {
-  fetch(image, fetchOptions).then(function(response) {
-    return response.blob()
-  }).then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob)
-    object.src = objectURL
+  if (fetch) {
+    fetch(image, fetchOptions).then(function(response) {
+      return response.blob()
+    }).then(function(myBlob) {
+      var objectURL = URL.createObjectURL(myBlob)
+      object.src = objectURL
+    })
+  } else {
+    object.setAttribute('src', image)
+  }
+}
+
+function scanThenFetchImages (selector) {
+  document.body.querySelectorAll(selector).forEach(function (currentValue) {
+    if (currentValue.getAttribute('img-src')) fetchImage(currentValue.getAttribute('img-src'), currentValue)
   })
 }
