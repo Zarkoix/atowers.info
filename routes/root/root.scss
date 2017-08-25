@@ -1,0 +1,209 @@
+@import '../../styles/core';
+@import '../../styles/routes';
+
+.tile__button {
+  color: $accent-color;
+  text-align: center;
+}
+
+.tile__button-text {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.tile__button-i {
+  font-size: 5rem;
+}
+
+
+.button-bg {
+  background-color: $background-color;
+  transition-duration: 0.5s;
+  text-decoration: none;
+}
+
+.button-bg:hover {
+  background-color: #d8d8d8;
+}
+
+.name {
+  background-color: $background-color;
+  color: $primary-color;
+  font-size: 4rem;
+  display: block;
+  @include path(polygon(0 0, 33% 0, 59% 100%, 0% 100%));
+
+  position: absolute;
+
+  height: 32.1vh;
+  width: 100%;
+}
+
+#ADAM {
+  margin: calc(21vh - 16%) 0 0 5%;
+}
+
+#TOWERS {
+  margin: 0;
+  margin-left: 10%;
+}
+
+.graphic {
+  background-color: black;
+  display: block;
+  @include path(polygon(37% 0, 100% 0, 100% 100%, 64% 100%));
+
+  position: absolute;
+
+  height: 32.1vh;
+  width: 100%;
+}
+
+.graphic > img {
+  float: right;
+  height: 100%;
+}
+
+.project__core {
+  position: absolute;
+  display: block;
+  height: 33vh;
+  width: 100%;
+}
+
+.project {
+  @extend .project__core;
+  top: 32vh;
+  background-color: $primary-color;
+  @include path(polygon(0 0, 59% 0, 38% 100%, 0 100%));
+}
+
+.project-background {
+  @extend .project__core;
+  @extend .button-bg;
+  @include path(polygon(2% 3%, 57% 3%, 37% 97%, 2% 97%));
+}
+
+.project-background > .tile__button {
+  @extend .tile__button;
+  margin-left: 10%;
+  margin-top: calc(16vh - 4em);
+  width: 25%;
+}
+
+.resume__core {
+  position: absolute;
+  display: block;
+
+  height: 33vh;
+  width: 100%;
+}
+
+.resume {
+  @extend .resume__core;
+  top: 67vh;
+  background-color: $primary-color;
+  @include path(polygon(0 0, 38% 0, 59% 100%, 0 100%));
+}
+
+.resume-background {
+  @extend .resume__core;
+  @extend .button-bg;
+  @include path(polygon(2% 3%, 37% 2%, 57% 97%, 2% 97%));
+}
+
+.resume-background > .tile__button {
+  @extend .tile__button;
+  margin-left: 10%;
+  margin-top: calc(18vh - 4em);
+  width: 25%;
+}
+
+#mediaBar {
+  background-color: $secondary-color;
+  display: block;
+  @include path(polygon(64% 0, 100% 0, 100% 10%, 69% 10%, 52% 50%, 69% 92%, 100% 92%, 100% 100%, 64% 100%, 42% 50%));
+
+  position: absolute;
+  top: 32vh;
+  height: 68vh;
+  width: 100%;
+}
+
+#mediaIcons {
+  color: $primary-color;
+  transition: color 0.2s ease-in-out;
+  position: absolute;
+  margin-top: 32vh;
+  font-size: 2.5em;
+  display: flex;
+  right: 1em;
+  justify-content: space-around;
+  width: 20%;
+  float: right;
+  line-height: 7vh;
+  height: 7vh;
+}
+
+#mediaIcons > a > .fa {
+  color: $primary-color;
+  transition: color 0.2s ease-in-out;
+}
+
+#mediaIcons > a >  .fa:hover {
+  color: $page-color;
+}
+
+.featured__core {
+  position: absolute;
+  display: block;
+  height: 34vh;
+  width: 100%;
+}
+
+.featured {
+  @extend .featured__core;
+  top: 32vh;
+  background-color: $primary-color;
+  @include path(polygon(70% 25%, 100% 25%, 100% 96%, 55% 96%));
+}
+
+.featured-background {
+  @extend .featured__core;
+  @extend .button-bg;
+  @include path(polygon(70.5% 28%, 99.5% 28%, 99.5% 94%, 56.5% 94%));
+}
+
+.featured-background > .tile__button {
+  @extend .tile__button;
+  margin-left: 72%;
+  margin-top: calc(21vh - 3.5rem);
+  width: 25%;
+}
+
+.blog__core {
+  position: absolute;
+  display: block;
+  height: 34vh;
+  width: 100%;
+}
+
+.blog {
+  @extend .blog__core;
+  top: 66vh;
+  background-color: $primary-color;
+  @include path(polygon(55% 4%, 100% 4%, 100% 80%, 70% 80%));
+}
+
+.blog-background {
+  @extend .blog__core;
+  @extend .button-bg;
+  @include path(polygon(56.5% 6%, 99.5% 6%, 99.5% 78.5%, 70.5% 78.5%));
+}
+
+.blog-background > .tile__button {
+  @extend .tile__button;
+  margin-left: 72%;
+  margin-top: calc(15vh - 3.5rem);
+  width: 25%;
+}

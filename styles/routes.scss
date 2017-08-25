@@ -1,0 +1,11 @@
+@mixin path($polygon) {
+  clip-path: $polygon;
+  -webkit-clip-path: $polygon;
+}
+
+@mixin component() {
+  position: absolute;
+  display: block;
+  height: 100vh;
+  width: 100%;
+}

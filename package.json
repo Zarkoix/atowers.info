@@ -1,0 +1,14 @@
+{
+  "name": "atowers.info",
+  "version": "1.0.0",
+  "description": "Personal Website of Adam Towers",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo no"
+  },
+  "author": "Adam Towers",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
+}

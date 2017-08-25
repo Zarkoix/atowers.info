@@ -1,0 +1,154 @@
+@import '../../styles/core';
+@import '../../styles/routes';
+
+@mixin squareSize($size) {
+  width: $size;
+  height: $size;
+}
+
+#nav {
+  @include component;
+  @include path(polygon(0% 0%, 100% 0%, 100% 6%, 88% 12%, 70% 12%, 70% 15%, 0% 15%));
+  background-color: $background-color;
+}
+
+#nav__contents {
+  line-height: 15vh;
+}
+
+#title {
+  font-size: 6rem;
+  vertical-align: middle;
+  color: $primary-color;
+  margin-left: 2vw;
+}
+
+#toc { //table of contents
+  @include component;
+  @include path(polygon(72% 14%, 88% 14%, 100% 8%, 100% 42%, 88% 36%, 72% 36%));
+  background-color: $secondary-color;
+}
+
+#back {
+  color: $primary-color;
+  vertical-align: middle;
+  margin-left: 2vw;
+  font-size: 3rem;
+  padding-right: 1vw;
+}
+
+#back:hover {
+  transition: color 0.2s ease-in-out;
+  color: $page-color;
+}
+
+#contents {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 85vh;
+  margin-top: 15vh;
+  margin-left: 5vw;
+  overflow: scroll;
+}
+
+.box {
+  display: inline-block;
+  height: auto;
+  width: 60%;
+  margin-top: 2vh;
+}
+
+.box__contents::before {
+  @include squareSize(100%);
+  @include path(polygon(4% 4%, 96% 4%, 96% 76%, 76% 96%, 4% 96%));
+  position: absolute;
+  z-index: -1;
+  content: '';
+  background-color: $background-color;
+}
+
+.box__contents::after {
+  @include squareSize(100%);
+  @include path(polygon(100% 65%, 100% 100%, 65% 100%));
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: $secondary-color;
+}
+
+.box__contents {
+  @include path(polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%));
+  width: 100%;
+  background-color: $primary-color;
+  display: inline-block;
+  position: relative;
+}
+
+.box__contents > .title {
+  font-size: 3rem;
+  color: $accent-color;
+  margin-top: 3.6vh;
+  padding-right: 4vw;
+  padding-left: 4vw;
+}
+
+.box__contents > .title > i {
+  float: right;
+}
+
+.box__contents > .item > img {
+  @include squareSize(10vw);
+  background-color: white;
+  float: left;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.box__contents > .item {
+  display: inline-block;
+  width: 88%;
+  height: auto;
+  margin-bottom: 3.2vh;
+  margin-left: 3.2vw;
+  color: $accent-color;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.box__contents > .item > h4 {
+  padding-top: 1vh;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.box__contents > .item:last-child {
+  padding-bottom: 2rem;
+  width: 78%;
+}
+
+#toc > ul {
+  color: $accent-color;
+  list-style-type: none;
+  position: absolute;
+  top: 14%;
+  left: 73%;
+  padding-left: 0;
+}
+
+#toc > ul > li {
+  cursor: pointer;
+  color: $accent-color;
+  border-left: thin solid $primary-color;
+  transition: border-left-width 0.4s;
+  padding-left: 0.5em;
+  font-size: 1.3em;
+}
+
+#toc > ul > li:hover {
+  border-left-width: medium;
+  opacity: 0.7;
+}

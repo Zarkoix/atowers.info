@@ -1,0 +1,45 @@
+html, body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Righteous'; }
+
+html {
+  background-color: #d8d8d8;
+  overflow: hidden; }
+
+a {
+  text-decoration: none !important; }
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+  html {
+    font-size: 2vw; } }
+@media screen and (min-aspect-ratio: 1 / 1) {
+  .container {
+    width: 100vh;
+    margin-left: calc(50% - 50vh); }
+
+  html {
+    font-size: 2vh; } }
+#left {
+  transform: translateX(-100vw); }
+
+#right {
+  transform: translateX(100vw); }
+
+.load#left {
+  transform: translateX(0) !important;
+  transition: transform 0.7s ease-in-out; }
+
+.load#right {
+  transform: translateX(0) !important;
+  transition: transform 0.8s ease-in-out; }
+
+.unload#left {
+  transform: translateX(-100vw) !important;
+  transition: transform 0.7s ease-in-out; }
+
+.unload#right {
+  transform: translateX(100vw) !important;
+  transition: transform 0.8s ease-in-out; }
+
+/*# sourceMappingURL=index.css.map */
