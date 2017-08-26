@@ -107,6 +107,7 @@ function fetchImage(image, object) {
 }
 
 function scanThenFetchImages (selector) {
+  console.log('scanning for images with: ' + selector)
   document.body.querySelectorAll(selector).forEach(function (currentValue) {
     if (currentValue.getAttribute('img-src')) fetchImage(currentValue.getAttribute('img-src'), currentValue)
   })
