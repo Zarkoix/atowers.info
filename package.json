@@ -1,0 +1,23 @@
+{
+  "name": "atowers.info",
+  "version": "1.0.0",
+  "description": "personal website for Adam Towers",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cp index.html 200.html ; surge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zarkoix/atowers.info.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Adam Towers",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Zarkoix/atowers.info/issues"
+  },
+  "homepage": "https://github.com/Zarkoix/atowers.info#readme"
+}
