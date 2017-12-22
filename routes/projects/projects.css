@@ -1,70 +1,77 @@
-#nav {
-  position: absolute;
-  display: block;
-  height: 100vh;
-  width: 100%;
-  clip-path: polygon(0 0, 75% 0, 80% 7.5%, 75% 15%, 0 15%);
-  -webkit-clip-path: polygon(0 0, 75% 0, 80% 7.5%, 75% 15%, 0 15%);
-  background-color: #4A4A4A; }
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1); }
+  40% {
+    transform: scale(1.08); }
+  50% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1); }
+  70% {
+    transform: scale(1.05); }
+  80% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+@keyframes fastPulse {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.05); }
+  40% {
+    transform: scale(1.1); }
+  50% {
+    transform: scale(1.05); }
+  60% {
+    transform: scale(1.08); }
+  70% {
+    transform: scale(1.14); }
+  80% {
+    transform: scale(1.08); }
+  100% {
+    transform: scale(1); } }
+@keyframes waver {
+  0% {
+    padding: 0 0 0 0vmin; }
+  50% {
+    padding: 0 0 0 6vmin; }
+  100% {
+    padding: 0 0 0 0vmin; } }
+@keyframes waverLeft {
+  0% {
+    padding: 0 0 0 0vmin; }
+  50% {
+    padding: 0 6vmin 0 0; }
+  100% {
+    padding: 0 0 0 0vmin; } }
+#container {
+  overflow: scroll; }
 
-#nav__contents {
-  height: 15%;
-  line-height: 15vh; }
+.navIcon {
+  padding: 1rem; }
+  .navIcon:hover {
+    animation-name: fastPulse;
+    animation-duration: 1.75s;
+    animation-iteration-count: infinite; }
 
-#title {
-  font-size: 6rem;
-  vertical-align: middle;
-  color: #009688;
-  margin-left: 2vmin; }
-
-#back {
-  color: #009688;
-  vertical-align: middle;
-  margin-left: 2vw;
-  font-size: 3rem;
-  padding-right: 1vw; }
-
-#back:hover {
-  transition: color 0.2s ease-in-out;
-  color: #d8d8d8; }
-
-#githubContainer {
-  z-index: -1;
-  position: absolute;
-  display: block;
-  height: 100vh;
-  width: 100%;
-  clip-path: polygon(80% 0, 100% 0, 100% 15%, 80% 15%, 85% 7.5%);
-  -webkit-clip-path: polygon(80% 0, 100% 0, 100% 15%, 80% 15%, 85% 7.5%);
-  background-color: #015F56; }
-
-#github {
-  float: right;
-  font-size: 5em;
-  line-height: 15vh;
-  width: 15%;
-  text-align: center; }
-
-.fa-github {
-  transition: color 0.2s ease-in-out;
-  color: #009688; }
-
-.fa-github:hover {
-  color: #d8d8d8; }
+#nav #nav__contents {
+  padding: 2vh 0;
+  color: #f8f8f2;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
 
 #contents {
-  z-index: -1;
   font-size: 8px;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding-top: 17vh;
-  padding-left: 5%;
-  position: absolute; }
+  justify-content: space-around; }
 
 .project {
-  background-color: #4A4A4A;
   width: 144px;
   height: 136px;
   margin: 1em;
@@ -83,20 +90,21 @@
   margin-bottom: 0.5em;
   width: 7em;
   height: 7em;
-  background-color: #d8d8d8;
+  background-color: #282a36;
   transition: background-color 0.3s;
   border-radius: 50%;
-  border-color: #015F56;
+  border-color: #44475a;
   border-width: 0.2em;
   border-style: solid; }
 
 .project > .imgContainer:hover {
-  background-color: #9B9B9B; }
+  background-color: #f8f8f2; }
 
 .project > h2 {
-  font-family: 'Righteous';
+  font-family: Roboto;
+  font-weight: 100;
   font-size: 2.9em;
-  color: #009688;
+  color: #f8f8f2;
   text-align: center;
   margin: 0; }
 

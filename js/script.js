@@ -1,5 +1,17 @@
+var currentRoute
+
+var fetchOptions = {
+  method: 'GET',
+  headers: {},
+  mode: 'cors',
+  cache: 'default'
+}
+
 window.onhashchange = function() {
     console.log('hashChange')
+    if (currentRoute && routes[currentRoute].resetData) {
+      routes[currentRoute].resetData()
+    }
     document.getElementById("left").classList.remove('load')
     document.getElementById("left").classList.add('unload')
     document.getElementById("right").classList.remove('load')
@@ -18,33 +30,19 @@ function openPage () {
     var route = window.location.hash.slice(2, window.location.hash.length)
     if (route === '') route = 'root'
     if (typeof routes[route] === 'object') {
-        console.log('root')
+      currentRoute = route
+      var container = document.getElementById("container")
 
-        var container = document.getElementById("container")
-
-        var myInit = { method: 'GET',
-            headers: {},
-            mode: 'cors',
-            cache: 'default' }
-
-        var reader = new FileReader()
-
-        fetch('routes/' + route + '/' + route + '.html', myInit).then(function(response) {
-            return response.blob()
-        }).then(function(myBlob) {
-            reader.readAsText(myBlob)
-        })
-
-        reader.onload = function() {
-            container.innerHTML = reader.result
-            setTimeout( function () {
-                document.getElementById("left").classList.add('load')
-                document.getElementById("right").classList.add('load')
-            }, 400 )
-            routes[route].script()
-
-            console.log('exeucted')
-        }
+      fetch('routes/' + route + '/' + route + '.html', fetchOptions).then(function(response) {
+          return response.text()
+      }).then(function(text) {
+        container.innerHTML = text
+        setTimeout( function () {
+          document.getElementById("left").classList.add('load')
+          document.getElementById("right").classList.add('load')
+        }, 400 )
+        routes[route].script()
+      })
 
     } else {
       window.location = ''
@@ -56,26 +54,45 @@ var routes
 routes = {
     root: {
         script: function () {
-            fetchImage("/routes/root/graphics/graphic.png", document.getElementById("graphic"))
+            fetchImage("/graphics/icon__dark.svg", document.getElementById("graphic"))
         }
     },
     resume: {
-        script: function () {
-          scanThenFetchImages('.item > img')
-          document.getElementById("educationLink").addEventListener("click", function () {
-            document.getElementById("educationLinkTarget").scrollIntoView(true)
-          })
-          document.getElementById("employmentLink").addEventListener("click", function () {
-            document.getElementById("employmentLinkTarget").scrollIntoView(true)
-          })
-          document.getElementById("hobbiesLink").addEventListener("click", function () {
-            document.getElementById("hobbiesLinkTarget").scrollIntoView(true)
-          })
-          document.getElementById("serviceLink").addEventListener("click", function () {
-            document.getElementById("serviceLinkTarget").scrollIntoView(true)
-          })
+      script: function () {
+        setTimeout(function () {
+          // document.getElementById("left").style.transform = "translateX(50%)"
+        }, 400)
+      },
+      callback: function (f, p) {
+        switch (f) {
+          case 'changeSection':
+            if (!this.data.section) {
+              document.getElementById("left").style.transform = "translateX(0)"
+            }
+            document.getElementById("right").style.transform = "translateX(100vw)"
+            var oldSection = this.data.section
+            this.data.section = p
+            console.log("going from " + oldSection + " to " + p)
+            setTimeout(function () {
+              if (oldSection) {
+                document.getElementById(oldSection + "__content").style.display = "none"
+                document.getElementById(oldSection).classList.remove("active")
+              }
+              document.getElementById(p + "__content").style.display = "block"
+              document.getElementById(p).classList.add("active")
+              document.getElementById("right").style.transform = "translateX(0)"
+            }, 400);
+            console.log(this.data)
+            break;
         }
-    },
+      },
+      data: {
+        section: false
+      },
+      resetData: function () {
+        this.data.section = false
+      }
+  },
   projects: {
       script: function () {
         scanThenFetchImages('.imgContainer > img')
@@ -83,12 +100,8 @@ routes = {
   }
 }
 
-
-var fetchOptions = {
-  method: 'GET',
-  headers: {},
-  mode: 'cors',
-  cache: 'default'
+function callback(r, f, p) {
+  routes[r].callback(f, p)
 }
 
 function fetchImage(image, object) {

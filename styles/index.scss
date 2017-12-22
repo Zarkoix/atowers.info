@@ -2,8 +2,9 @@
 
 html, body {
   margin: 0;
-  height: 100vh;
-  font-family: 'Righteous';
+  height: 100%;
+  font-family: 'Roboto';
+
 }
 
 html {
@@ -11,13 +12,18 @@ html {
   overflow: hidden;
 }
 
+.container {
+  height: 100%;
+}
+
 a {
   text-decoration: none !important;
+  color: inherit;
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
   html {
-    font-size: 2vw;
+    font-size: 12px;
   }
 }
 
@@ -32,30 +38,44 @@ a {
   }
 }
 
+h1 {
+  font-weight: 100;
+  font-size: 8vmin;
+  margin: 0;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 4vmin;
+  margin: 0;
+}
+
 #left {
   transform: translateX(-100vw);
+  transition: transform 0.3s ease-in-out;
 }
 
 #right {
   transform: translateX(100vw);
+  transition: transform 0.3s ease-in-out;
 }
 
 .load#left {
-  transform: translateX(0) !important;
-  transition: transform 0.7s ease-in-out;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
 }
 
 .load#right {
-  transform: translateX(0) !important;
-  transition: transform 0.8s ease-in-out;
+  transform: translateX(0);
+  transition: transform 0.4s ease-in-out;
 }
 
 .unload#left {
-  transform: translateX(-100vw) !important;
-  transition: transform 0.7s ease-in-out;
+  transform: translateX(-100vw);
+  transition: transform 0.3s ease-in-out;
 }
 
 .unload#right {
-  transform: translateX(100vw) !important;
-  transition: transform 0.8s ease-in-out;
+  transform: translateX(100vw);
+  transition: transform 0.4s ease-in-out;
 }

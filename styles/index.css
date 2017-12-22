@@ -1,18 +1,70 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1); }
+  40% {
+    transform: scale(1.08); }
+  50% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1); }
+  70% {
+    transform: scale(1.05); }
+  80% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+@keyframes fastPulse {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(1.05); }
+  40% {
+    transform: scale(1.1); }
+  50% {
+    transform: scale(1.05); }
+  60% {
+    transform: scale(1.08); }
+  70% {
+    transform: scale(1.14); }
+  80% {
+    transform: scale(1.08); }
+  100% {
+    transform: scale(1); } }
+@keyframes waver {
+  0% {
+    padding: 0 0 0 0vmin; }
+  50% {
+    padding: 0 0 0 6vmin; }
+  100% {
+    padding: 0 0 0 0vmin; } }
+@keyframes waverLeft {
+  0% {
+    padding: 0 0 0 0vmin; }
+  50% {
+    padding: 0 6vmin 0 0; }
+  100% {
+    padding: 0 0 0 0vmin; } }
 html, body {
   margin: 0;
-  height: 100vh;
-  font-family: 'Righteous'; }
+  height: 100%;
+  font-family: 'Roboto'; }
 
 html {
-  background-color: #d8d8d8;
+  background-color: #282a36;
   overflow: hidden; }
 
+.container {
+  height: 100%; }
+
 a {
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  color: inherit; }
 
 @media screen and (max-aspect-ratio: 1 / 1) {
   html {
-    font-size: 2vw; } }
+    font-size: 12px; } }
 @media screen and (min-aspect-ratio: 1 / 1) {
   .container {
     width: 100vh;
@@ -20,26 +72,38 @@ a {
 
   html {
     font-size: 2vh; } }
+h1 {
+  font-weight: 100;
+  font-size: 8vmin;
+  margin: 0; }
+
+h3 {
+  font-weight: 300;
+  font-size: 4vmin;
+  margin: 0; }
+
 #left {
-  transform: translateX(-100vw); }
+  transform: translateX(-100vw);
+  transition: transform 0.3s ease-in-out; }
 
 #right {
-  transform: translateX(100vw); }
+  transform: translateX(100vw);
+  transition: transform 0.3s ease-in-out; }
 
 .load#left {
-  transform: translateX(0) !important;
-  transition: transform 0.7s ease-in-out; }
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out; }
 
 .load#right {
-  transform: translateX(0) !important;
-  transition: transform 0.8s ease-in-out; }
+  transform: translateX(0);
+  transition: transform 0.4s ease-in-out; }
 
 .unload#left {
-  transform: translateX(-100vw) !important;
-  transition: transform 0.7s ease-in-out; }
+  transform: translateX(-100vw);
+  transition: transform 0.3s ease-in-out; }
 
 .unload#right {
-  transform: translateX(100vw) !important;
-  transition: transform 0.8s ease-in-out; }
+  transform: translateX(100vw);
+  transition: transform 0.4s ease-in-out; }
 
 /*# sourceMappingURL=index.css.map */

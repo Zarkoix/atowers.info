@@ -1,5 +1,55 @@
-$primary-color: #009688;
+$primary-color: #2F2F2F;
+$page-color: #D8D8D8;
+
 $secondary-color: #015F56;
 $background-color: #4A4A4A;
 $accent-color: #9B9B9B;
-$page-color: #d8d8d8;
+
+$primary-color: #f8f8f2;
+$page-color: #282a36;
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  30% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  50% { transform: scale(1); }
+  60% { transform: scale(1); }
+  70% { transform: scale(1.05); }
+  80% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fastPulse {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.05); }
+  40% { transform: scale(1.1); }
+  50% { transform: scale(1.05); }
+  60% { transform: scale(1.08); }
+  70% { transform: scale(1.14); }
+  80% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes waver {
+  0%   {
+    padding: 0 0 0 0vmin;
+  }
+  50%  {
+    padding: 0 0 0 6vmin;
+  }
+  100% {
+    padding: 0 0 0 0vmin;
+  }
+}
+
+@keyframes waverLeft {
+  0%   {
+    padding: 0 0 0 0vmin;
+  }
+  50%  {
+    padding: 0 6vmin 0 0;
+  }
+  100% {
+    padding: 0 0 0 0vmin;
+  }
+}
