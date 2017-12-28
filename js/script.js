@@ -43,14 +43,14 @@ function openPage () {
           document.getElementById("left").classList.add('load')
           document.getElementById("right").classList.add('load')
         }, 400 )
-        routes[route].script()
+        setTimeout( function () {
+          routes[route].script()
+        }, 0)
       })
-
     } else {
       window.location = ''
     }
 }
-
 
 var routes
 routes = {
@@ -63,7 +63,7 @@ routes = {
       script: function () {
         scanThenFetchImages('.item > img')
         if (!this.data.section) {
-          this.changeSection("Education")
+          this.changeSection("Employment")
         }
           // document.getElementById("left").style.transform = "translateX(50%)"
       },
@@ -104,6 +104,9 @@ routes = {
       script: function () {
         scanThenFetchImages('.imgContainer > img')
       }
+  },
+  contact: {
+      script: function () {}
   }
 }
 
@@ -127,7 +130,6 @@ function fetchImage(image, object) {
 }
 
 function scanThenFetchImages (selector) {
-  console.log('scanning for images with: ' + selector)
   document.body.querySelectorAll(selector).forEach(function (currentValue) {
     if (currentValue.getAttribute('img-src')) fetchImage(currentValue.getAttribute('img-src'), currentValue)
   })

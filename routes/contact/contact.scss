@@ -1,0 +1,94 @@
+@import '../../styles/core';
+@import '../../styles/routes';
+
+.navIcon {
+  padding: 1rem;
+  &:hover {
+    animation-name: fastPulse;
+    animation-duration: 1.75s;
+    animation-iteration-count: infinite;
+  }
+}
+
+#nav {
+  #nav__contents {
+    padding: 2vh 0;
+    color: $primary-color;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  form {
+    width: 60%;
+    input, textarea {
+      font-family: Roboto, sans-serif;
+      padding: 2px 4px;
+      margin: 4px;
+      display: block;
+
+      font-size: 16px;
+      color: $primary-color;
+    }
+    label {
+      font-family: Roboto, sans-serif;
+      color: $primary-color;
+    }
+
+    input[type="text"], input[type="email"] {
+      margin-bottom: 16px;
+
+      background-color: transparent;
+
+      font-weight: 100;
+
+      border: none;
+      border-bottom: 1px $accent-color solid;
+      transition: border-bottom-color 0.2s ease-in-out;
+      &:hover, &:focus {
+        border-bottom-color: $primary-color;
+      }
+    }
+    textarea {
+      display: block;
+      width: 100%;
+      resize: vertical;
+
+      background-color: transparent;
+
+      border: 1px $accent-color solid;
+      transition: border-color 0.2s ease-in-out;
+      &:hover, &:focus {
+        border-color: $primary-color;
+      }
+    }
+    input[type="text"], input[type="email"], textarea{
+      width: calc(100% - 16px);
+    }
+    input[type="submit"] {
+      padding: 3px 8px;
+      font-size: 16px;
+      margin-top: 16px;
+      width: auto;
+      float: right;
+
+      background-color: $page-color;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      transition: color, background-color 0.2s ease-in-out;
+      &:hover {
+        background-color: $primary-color;
+        color: $page-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
+

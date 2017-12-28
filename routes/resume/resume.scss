@@ -81,6 +81,14 @@
   }
 }
 
+#download {
+  z-index: 2;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-size: 2rem;
+}
+
 @media screen and (max-aspect-ratio: 1/1) {
   .grid {
     grid-template-rows: 35% 65%;

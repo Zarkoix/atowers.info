@@ -1,3 +1,10 @@
+/*
+$primary-color: #2F2F2F;
+$page-color: #D8D8D8;
+$secondary-color: #015F56;
+$background-color: #4A4A4A;
+$accent-color: #9B9B9B;
+*/
 @keyframes pulse {
   0% {
     transform: scale(1); }
@@ -56,13 +63,15 @@
     animation-duration: 1.75s;
     animation-iteration-count: infinite; }
 
-#nav #nav__contents {
-  padding: 2vh 0;
-  color: #f8f8f2;
-  font-size: 4rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+#nav {
+  width: 100%; }
+  #nav #nav__contents {
+    padding: 2vh 0;
+    color: #f8f8f2;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
 
 #contents {
   font-size: 8px;
@@ -111,7 +120,7 @@
 .project > p {
   font-family: Roboto;
   font-size: 1.5em;
-  color: #9B9B9B;
+  color: #6272a4;
   text-align: center;
   margin: 0;
   margin-bottom: 1em; }
