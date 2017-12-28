@@ -3,13 +3,16 @@
 html, body {
   margin: 0;
   height: 100%;
-  font-family: 'Roboto';
-
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
   background-color: $page-color;
   overflow: hidden;
+}
+
+body {
+  overflow: auto;
 }
 
 .container {

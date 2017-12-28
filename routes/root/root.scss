@@ -20,16 +20,21 @@
       animation-iteration-count: infinite;
     }
     h1 {
-      margin: 2vh 0;
+      margin: 2vh 0 0 0;
+    }
+    h2 {
+      font-family: Roboto, sans-serif;
+      font-weight: 100;
+      font-size: 4vmin;
+      margin: 0 0 2vh 0;
     }
     .social {
       line-height: 6vh;
-      i {
-        font-size: 3vh;
-        transition: font-size 0.2s ease-in-out;
-      }
-      i:hover {
-        font-size: 4vh;
+      a {
+        padding: 0 8px;
+        i {
+          font-size: 4vh;
+        }
       }
     }
   }
@@ -65,7 +70,7 @@
 
 @media screen and (max-aspect-ratio: 1/1) {
   .grid {
-    grid-template-rows: 40% 60%;
+    grid-template-rows: 50% 50%;
     grid-template-columns: 100%;
     .root__left {
       justify-content: flex-end;

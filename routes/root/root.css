@@ -63,14 +63,18 @@
       animation-duration: 1.25s;
       animation-iteration-count: infinite; }
     .grid .root__left h1 {
-      margin: 2vh 0; }
+      margin: 2vh 0 0 0; }
+    .grid .root__left h2 {
+      font-family: Roboto, sans-serif;
+      font-weight: 100;
+      font-size: 4vmin;
+      margin: 0 0 2vh 0; }
     .grid .root__left .social {
       line-height: 6vh; }
-      .grid .root__left .social i {
-        font-size: 3vh;
-        transition: font-size 0.2s ease-in-out; }
-      .grid .root__left .social i:hover {
-        font-size: 4vh; }
+      .grid .root__left .social a {
+        padding: 0 8px; }
+        .grid .root__left .social a i {
+          font-size: 4vh; }
   .grid .root__right {
     color: #f8f8f2;
     display: flex;
@@ -95,7 +99,7 @@
 
 @media screen and (max-aspect-ratio: 1 / 1) {
   .grid {
-    grid-template-rows: 40% 60%;
+    grid-template-rows: 50% 50%;
     grid-template-columns: 100%; }
     .grid .root__left {
       justify-content: flex-end; }

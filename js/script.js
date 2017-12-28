@@ -22,7 +22,9 @@ window.onhashchange = function() {
 }
 
 window.onload = function () {
-  if (!fetch) console.log('Browser does not support fetch, using fallback')
+  if (!fetch) {
+    console.log('Browser does not support fetch, using fallback')
+  }
   openPage()
 }
 
@@ -59,32 +61,37 @@ routes = {
     },
     resume: {
       script: function () {
-        setTimeout(function () {
+        scanThenFetchImages('.item > img')
+        if (!this.data.section) {
+          this.changeSection("Education")
+        }
           // document.getElementById("left").style.transform = "translateX(50%)"
-        }, 400)
       },
       callback: function (f, p) {
         switch (f) {
           case 'changeSection':
-            if (!this.data.section) {
-              document.getElementById("left").style.transform = "translateX(0)"
-            }
-            document.getElementById("right").style.transform = "translateX(100vw)"
-            var oldSection = this.data.section
-            this.data.section = p
-            console.log("going from " + oldSection + " to " + p)
-            setTimeout(function () {
-              if (oldSection) {
-                document.getElementById(oldSection + "__content").style.display = "none"
-                document.getElementById(oldSection).classList.remove("active")
-              }
-              document.getElementById(p + "__content").style.display = "block"
-              document.getElementById(p).classList.add("active")
-              document.getElementById("right").style.transform = "translateX(0)"
-            }, 400);
-            console.log(this.data)
+            this.changeSection(p)
             break;
         }
+      },
+      changeSection: function (p) {
+        if (!this.data.section) {
+          document.getElementById("left").style.transform = "translateX(0)"
+        }
+        document.getElementById("right").style.transform = "translateX(100vw)"
+        var oldSection = this.data.section
+        this.data.section = p
+        console.log("going from " + oldSection + " to " + p)
+        setTimeout(function () {
+          if (oldSection) {
+            document.getElementById(oldSection + "__content").style.display = "none"
+            document.getElementById(oldSection).classList.remove("active")
+          }
+          document.getElementById(p + "__content").style.display = "block"
+          document.getElementById(p).classList.add("active")
+          document.getElementById("right").style.transform = "translateX(0)"
+        }, 400);
+        console.log(this.data)
       },
       data: {
         section: false

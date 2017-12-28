@@ -49,11 +49,14 @@
 html, body {
   margin: 0;
   height: 100%;
-  font-family: 'Roboto'; }
+  font-family: 'Roboto', sans-serif; }
 
 html {
   background-color: #282a36;
   overflow: hidden; }
+
+body {
+  overflow: auto; }
 
 .container {
   height: 100%; }

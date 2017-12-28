@@ -94,13 +94,15 @@
           display: inline-block; }
         .grid .resume__right #Education__content .item h3, .grid .resume__right #Employment__content .item h3, .grid .resume__right #Interests__content .item h3, .grid .resume__right #Service__content .item h3 {
           font-size: 2rem; }
+        .grid .resume__right #Education__content .item img, .grid .resume__right #Employment__content .item img, .grid .resume__right #Interests__content .item img, .grid .resume__right #Service__content .item img {
+          display: none; }
         .grid .resume__right #Education__content .item h4, .grid .resume__right #Education__content .item p, .grid .resume__right #Employment__content .item h4, .grid .resume__right #Employment__content .item p, .grid .resume__right #Interests__content .item h4, .grid .resume__right #Interests__content .item p, .grid .resume__right #Service__content .item h4, .grid .resume__right #Service__content .item p {
           margin: 0; }
         .grid .resume__right #Education__content .item h4, .grid .resume__right #Employment__content .item h4, .grid .resume__right #Interests__content .item h4, .grid .resume__right #Service__content .item h4 {
           font-size: 1.5rem;
-          font-weight: 100;
           margin: 4px 0; }
         .grid .resume__right #Education__content .item p, .grid .resume__right #Employment__content .item p, .grid .resume__right #Interests__content .item p, .grid .resume__right #Service__content .item p {
+          font-weight: 100;
           font-size: 16px; }
       .grid .resume__right #Education__content .item.active, .grid .resume__right #Employment__content .item.active, .grid .resume__right #Interests__content .item.active, .grid .resume__right #Service__content .item.active {
         border: 1pt solid #f8f8f2; }
