@@ -79,9 +79,12 @@ $accent-color: #9B9B9B;
     .grid .root__left .social {
       line-height: 6vh; }
       .grid .root__left .social a {
-        padding: 0 8px; }
+        padding: 0 8px;
+        transition: color 0.2s ease-in-out; }
         .grid .root__left .social a i {
           font-size: 4vh; }
+        .grid .root__left .social a:hover {
+          color: #6272a4; }
   .grid .root__right {
     color: #f8f8f2;
     display: flex;

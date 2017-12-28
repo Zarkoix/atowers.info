@@ -87,6 +87,11 @@
   bottom: 16px;
   right: 16px;
   font-size: 2rem;
+  color: $accent-color;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
@@ -99,7 +104,6 @@
     .resume__right {
       justify-content: space-between;
       padding: 1rem;
-      // justify-content: normal;
       #Interests__content {
         .item {
           p {
@@ -118,7 +122,6 @@
     & > #left.resume__left {
       transform: translateX(50%);
     }
-
     .resume__right {
       justify-content: space-around;
     }

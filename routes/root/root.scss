@@ -32,8 +32,12 @@
       line-height: 6vh;
       a {
         padding: 0 8px;
+        transition: color 0.2s ease-in-out;
         i {
           font-size: 4vh;
+        }
+        &:hover {
+          color: $accent-color;
         }
       }
     }
