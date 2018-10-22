@@ -59,47 +59,47 @@ routes = {
             fetchImage("/graphics/icon__dark.svg", document.getElementById("graphic"))
         }
     },
-    resume: {
-      script: function () {
-        scanThenFetchImages('.item > img')
-        if (!this.data.section) {
-          this.changeSection("Employment")
-        }
-          // document.getElementById("left").style.transform = "translateX(50%)"
-      },
-      callback: function (f, p) {
-        switch (f) {
-          case 'changeSection':
-            this.changeSection(p)
-            break;
-        }
-      },
-      changeSection: function (p) {
-        if (!this.data.section) {
-          document.getElementById("left").style.transform = "translateX(0)"
-        }
-        document.getElementById("right").style.transform = "translateX(100vw)"
-        var oldSection = this.data.section
-        this.data.section = p
-        console.log("going from " + oldSection + " to " + p)
-        setTimeout(function () {
-          if (oldSection) {
-            document.getElementById(oldSection + "__content").style.display = "none"
-            document.getElementById(oldSection).classList.remove("active")
-          }
-          document.getElementById(p + "__content").style.display = "block"
-          document.getElementById(p).classList.add("active")
-          document.getElementById("right").style.transform = "translateX(0)"
-        }, 400);
-        console.log(this.data)
-      },
-      data: {
-        section: false
-      },
-      resetData: function () {
-        this.data.section = false
-      }
-  },
+  //   resume: {
+  //     script: function () {
+  //       scanThenFetchImages('.item > img')
+  //       if (!this.data.section) {
+  //         this.changeSection("Employment")
+  //       }
+  //         // document.getElementById("left").style.transform = "translateX(50%)"
+  //     },
+  //     callback: function (f, p) {
+  //       switch (f) {
+  //         case 'changeSection':
+  //           this.changeSection(p)
+  //           break;
+  //       }
+  //     },
+  //     changeSection: function (p) {
+  //       if (!this.data.section) {
+  //         document.getElementById("left").style.transform = "translateX(0)"
+  //       }
+  //       document.getElementById("right").style.transform = "translateX(100vw)"
+  //       var oldSection = this.data.section
+  //       this.data.section = p
+  //       console.log("going from " + oldSection + " to " + p)
+  //       setTimeout(function () {
+  //         if (oldSection) {
+  //           document.getElementById(oldSection + "__content").style.display = "none"
+  //           document.getElementById(oldSection).classList.remove("active")
+  //         }
+  //         document.getElementById(p + "__content").style.display = "block"
+  //         document.getElementById(p).classList.add("active")
+  //         document.getElementById("right").style.transform = "translateX(0)"
+  //       }, 400);
+  //       console.log(this.data)
+  //     },
+  //     data: {
+  //       section: false
+  //     },
+  //     resetData: function () {
+  //       this.data.section = false
+  //     }
+  // },
   projects: {
       script: function () {
         scanThenFetchImages('.imgContainer > img')
